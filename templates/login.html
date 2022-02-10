@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>homepage</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="C:\Users\User\Desktop\my iot project github\Smart\smartpark\static\css\order.css">
+<h1 align ="center">Smart Gardning Website </h1>
+</head>
+
+<style>
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+	font-family:"Comic Sans MS";
+}
+
+.topnav a:hover {
+    background-color: blue;
+    color: white;
+}
+
+.topnav a.active {
+    background-color: blue;
+    color: yellow;
+}
+
+body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+</style>
+
+<body style="background: url(https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;">
+
+<h1 align = "center" >
+
+
+ 
+
+
+
+
+
+
+
+<form action="loginmethod" method="post">
+    {% csrf_token %}
+
+  <h3 align ="center" >LOGIN </h3>
+<input type="text" name="username" type="text" placeholder="username"><br>
+    <input type="password" name="password" type="password" placeholder="password"><br>
+    <input type="submit" >
+</form>
+<button onclick="register()"  >HOMEPAGE</button>
+<button onclick="register()"  >SIGN UP/ REGISTER HERE</button>
+
+<script>
+    function register() {
+    location.replace("register.html")
+    }
+    function home() {
+    location.replace("home.html")
+    }
+
+    </script>
+
+</h1>
+</body>
+</html>
+

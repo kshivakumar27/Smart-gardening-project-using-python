@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="lightblue">
+
+<h1>Feedback review </h1>
+
+<hr>
+  {%for item in all1%}
+    ID :{{item.id}} <br>
+    u_name : {{item.u_name}} <br>
+    u_email : {{item.u_email}} <br>
+    u_phone : {{item.u_phone}} <br>
+    u_rate : {{item.u_rate}} <br>
+    u_suggestion : {{item.u_suggestion}} <br>
+    u_review : {{item.u_review}} <br>
+<hr>
+  {%endfor%}
+
+<button onclick="administrator()"  >Back-to-Adminupdate</button>
+
+
+
+<script>
+    function administrator() {
+    location.replace("administratorupdate.html")
+    }
+
+</script>
+
+
+</body>
+</html>

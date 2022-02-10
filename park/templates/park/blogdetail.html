@@ -1,0 +1,136 @@
+{% extends "blog/base.html" %}
+{% load tz %}
+{% block content %}
+
+<div class="container">
+<div class="row">
+    <div class="col l12">
+        <div class="card blue-grey">
+            <div class="card-image">
+                <img src="{{ blog.Image.url }}"/>
+                <span class="card-title">{{ blog.Title | title}}</span>
+            </div>
+            <div class="card-content white-text">
+                <span>{{ blog.Date }}</span>
+                <p> {{ blog.Content | safe }} </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- comment -->
+<div class="row">
+            <form method="post" class="col l12">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="input-field col l8">
+                        <i class="material-icons prefix">account_circle</i>
+                        {{ comment_form.Name }}
+                        <label for="id_Name">Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col l8">
+                        <i class="material-icons prefix">email</i>
+                        {{ comment_form.Email }}
+                        <label for="id_Email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col l8">
+                        <i class="material-icons prefix">mode_edit</i>
+                        {{ comment_form.Body }}
+                        <label for="id_Body">Comment</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l5">
+                        <button class="btn waves-effect waves-light" type="submit">Comment</button>
+                    </div>
+                </div>
+            </form>
+</div>
+
+<!-- comment list -->
+
+{% for comment in comments %}
+
+<div class="row">
+    <div class="col l12 s12">
+        <div class="card-panel blue darken-4">
+            <div class="card-content white-text">
+                <span>{{ comment.Name | title | linebreaks }}</span>
+                <span>{{ comment.Created | localtime }}</span>
+                <p>{{ comment.Body | linebreaks }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    {% for reply in comment.replies.all %}
+
+    <div class="row">
+        <div class="col s10 offset-s2">
+            <div class="card-panel  blue darken-1">
+                <div class="card-content white-text">
+                    <span>{{ reply.Name | title | linebreaks }}</span>
+                    <span>{{ reply.Created | localtime }}</span>
+                    <p>{{ reply.Body | linebreaks }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+
+    <div class="row">
+    <div class="col s10 offset-s2">
+            <form method="post" class="col l6 ">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="input-field col l6">
+                        <i class="material-icons prefix">account_circle</i>
+                        {{ comment_form.Name }}
+                        <label for="id_Name">Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col l10">
+                        <i class="material-icons prefix">email</i>
+                        {{ comment_form.Email }}
+                        <label for="id_Email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col l10">
+                        <i class="material-icons prefix">mode_edit</i>
+                        {{ comment_form.Body }}
+                        <label for="id_Body">Comment</label>
+                    </div>
+                </div>
+                <input type="hidden" name="Parent_id" value="{{ comment.id }}">
+                <div class="row">
+                    <div class="col l5">
+                        <button class="btn waves-effect waves-light" type="submit">Reply</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% empty %}
+
+    <div class="row">
+        <div class="col l12 s12">
+            <div class="card-panel  blue darken-1">
+                <div class="card-content white-text">
+                    <span>There is no comment....</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endfor %}
+
+</div>
+{% endblock %}

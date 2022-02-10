@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+
+<title>Smart gardening Feedback</title>
+
+
+
+</head>
+
+<body style="background: url(https://images.pexels.com/photos/34090/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;">
+
+
+
+
+<h1 align = "center" >
+<form action="Feedbackreview" method="post">
+    {% csrf_token %}
+
+ <h3>Smart gardening Feedback</h3>
+
+    
+
+    <input type="text" name="u_name" type="text" placeholder="Username">
+<input type="email" name="u_email" type="email" placeholder="Email">
+    <input type="text" name="u_phone" type="text" placeholder="Phone number">
+<input type="date" name="u_date" type="date" placeholder="u_date">
+<input type="text" name="u_rate" type="text" placeholder="Ratings">
+<input type="text" name="u_suggestion" type="text" placeholder="Suggestion to apply">
+<input type="text" name="u_review" type="text" placeholder="Review about Park"><br>
+    <input type="submit" >
+
+
+
+
+</form>
+
+ <a href="Feedbackview.html"><h6>Feedback Review</h6></a>
+<button onclick="mainpage()"  >Return to main page</button>
+
+
+<script>
+    function mainpage() {
+    location.replace("new.html")
+    }
+
+    </script>
+
+</h1>
+</body>
+</html>

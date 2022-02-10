@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Details</title>
+</head>
+<body>
+<h1>Details </h1>
+<hr>
+  {%for item in all%}
+    ID :{{item.id}} <br>
+    previous_temparature_value : {{item.previous_temparature_value}} <br>
+    present_temparature_value : {{item.present_temparature_value}} <br>
+    sprinkler_state : {{item.sprinkler_state}} <br>
+    previous_humidity_value : {{item.previous_humidity_value}} <br>
+    present_humidity_value : {{item.present_humidity_value}} <br>
+    water_pump_state : {{item.water_pump_state}} <br>
+    street_light_state : {{item.street_light_state}} <br>
+    alarm_state : {{item.alarm_state}} <br>
+
+    description : {{item.description}} <br>
+<hr>
+  {%endfor%} 
+
+
+
+
+<button onclick="backtohome()"  >Back-to-home</button>
+
+<script>
+    function backtohome() {
+    location.replace("new.html")
+    }
+
+    </script>
+ 
+</body>
+</html>

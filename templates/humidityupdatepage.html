@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+
+<title>Humidity Status update</title>
+</head>
+
+
+<body style="background: url(https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;">
+<h1 align = "center" >
+<form action="water" method="post">
+    {% csrf_token %}
+
+ <h3>Smart gardening User Information Status update</h3>   
+
+    <input type="text" name="previous_humidity_value" type="text" placeholder="previous_humidity_value">
+<input type="text" name="present_humidity_value" type="text" placeholder="present_humidity_value">
+    <input type="text" name="water_state" type="text" placeholder="water_state">
+<input type="date" name="updatetime" type="date" placeholder="updatetime">
+
+
+
+<input type="text" name="description" type="text" placeholder="description"><br>
+
+
+
+    <input type="submit" >
+
+
+
+
+</form>
+<button onclick="adminpage()"  >Return to main page</button>
+
+
+<script>
+    function adminpage() {
+    location.replace("Admin.html")
+    }
+
+    </script>
+
+</h1>
+</body>
+</html>

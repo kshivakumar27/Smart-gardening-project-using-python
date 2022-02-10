@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Details</title>
+</head>
+<body bgcolor="skyblue">
+<h1>Sprinkler status </h1>
+
+<hr>
+  {%for item in all2%}
+    ID :{{item.id}} <br>
+    previous_temparature_value : {{item.previous_temparature_value}} <br>
+    present_temparature_value : {{item.present_temparature_value}} <br>
+    sprinkler_state : {{item.sprinkler_state}} <br>
+ 
+    description : {{item.description}} <br>
+<hr>
+  {%endfor%} 
+
+
+<button onclick="administrator()"  >Back-to-Adminupdate</button>
+
+
+
+<script>
+    function administrator() {
+    location.replace("administratorupdate.html")
+    }
+
+
+    </script>
+ 
+</body>
+</html>

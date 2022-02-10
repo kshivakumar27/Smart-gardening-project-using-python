@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+
+<title>Garbage Status update</title>
+</head>
+
+<body bgcolor="">
+<body style="background: url(https://images.pexels.com/photos/1040499/pexels-photo-1040499.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;">
+<h1 align = "center" >
+<form action="garbage" method="post">
+    {% csrf_token %}
+
+ <h3>Garbage Status update</h3>   
+
+    <input type="text" name="garbage_update" type="text" placeholder="garbage_update">
+
+<input type="date" name="updatetime" type="date" placeholder="updatetime">
+<input type="text" name="description" type="text" placeholder="description"><br>
+
+
+
+    <input type="submit" >
+
+
+
+
+</form>
+<button onclick="adminpage()"  >Return to main page</button>
+
+
+<script>
+    function adminpage() {
+    location.replace("Admin.html")
+    }
+
+    </script>
+
+</h1>
+</body>
+</html>

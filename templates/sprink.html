@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+
+<title>Temperature Status update</title>
+</head>
+<body style="background: url(https://images.pexels.com/photos/131634/pexels-photo-131634.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;">
+
+<h1 align = "center" >
+<form action="sprinkler" method="post">
+    {% csrf_token %}
+
+ <h3>Temperature Status update</h3>   
+
+    <input type="text" name="previous_temparature_value" type="text" placeholder="previous_temparature_value">
+<input type="text" name="present_temparature_value" type="text" placeholder="present_temparature_value">
+    <input type="text" name="sprinkler_state" type="text" placeholder="sprinkler_state">
+
+
+
+<input type="text" name="description" type="text" placeholder="description"><br>
+
+
+
+    <input type="submit" >
+
+
+
+
+</form>
+<button onclick="adminpage()"  >Return to main page</button>
+
+
+<script>
+    function adminpage() {
+    location.replace("Admin.html")
+    }
+
+    </script>
+
+</h1>
+</body>
+</html>

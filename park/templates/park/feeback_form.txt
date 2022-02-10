@@ -1,0 +1,21 @@
+Name: 
+{{ u_name }}
+
+Email:
+{{ u_email }}
+
+Phone:
+{{ u_phone }}
+
+Rate:
+{{ u_rate }}
+
+Suggestion:
+{{ u_suggestion }}
+
+Review:
+{{ u_email }}
+
+
+Feedback:
+{{ feedback_content }}

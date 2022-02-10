@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homepage</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="C:\Users\User\Desktop\my iot project github\Smart\smartpark\static\css\order.css">
+<h1 align ="center"> SMART GARDENING REGISTRATION </h1>
+</head>
+
+<style>
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+	font-family:"Comic Sans MS";
+}
+
+.topnav a:hover {
+    background-color: blue;
+    color: white;
+}
+
+.topnav a.active {
+    background-color: blue;
+    color: yellow;
+}
+
+body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+</style>
+
+
+<body style="background: url(https://images.pexels.com/photos/291777/pexels-photo-291777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat;">
+<h1 align="center">
+
+
+
+
+<form action="register" method="post">
+<h3>Register here to access Website</h3>
+
+
+    {% csrf_token %}
+
+ <br>
+    <input type="text" name="first_name" placeholder="First Name">
+
+    <input type="text" name="last_name" placeholder="Last Name">
+
+    <input type="text" name="username" placeholder="User Name">
+
+    <input type="email" name="email" placeholder="Email">
+
+    <input type="password" name="password1" placeholder="Password">
+
+    <input type="password" name="password2" placeholder="Confirm Password"><br>
+
+    <input type="submit" >
+</form>
+
+<button onclick="backtohome()"  >Back-to-home</button>
+
+<script>
+    function backtohome() {
+    location.replace("home.html")
+    }
+
+    </script>
+
+</h1>
+
+
+</body>
+</html>

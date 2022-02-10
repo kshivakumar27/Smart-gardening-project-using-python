@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+</head>
+
+           
+
+
+  
+
+<body bgcolor="lightblue"> 
+
+
+<li><a href="temp.html" data-transition="slidedown"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRKC5W7jX9XkqrUol9wSIAjh8mI1uLqH89BnL762aTKG0uULkmT&usqp=CAU"/> <h2> </h2> <p> Temperature Sensor  </p></a></li>
+
+
+  
+ <h1>Temparature status</h1>
+ {% load random_temperature %}
+
+<p>  Previous Temperature Fluctuations  = {% random_int 1 100 %} </p>
+
+
+
+<p> Sprinkler state = {% random_int 0 1 %} </p><p> srinklers is on when its 1 and otherwise off when its 0</p>
+
+
+<a href="sprinklerdisplay.html"><h1>view</h1></a>
+
+
+
+
+<button onclick="backtohome()"  >Back-to-home</button>
+
+
+
+
+<script>
+    function backtohome() {
+    location.replace("new.html")
+    }
+ </script>  
+</body>
+</html>

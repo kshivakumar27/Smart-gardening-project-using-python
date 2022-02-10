@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+
+<title> Streetlight Status update</title>
+</head>
+<body style="background: url(https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?cs=srgb&dl=blue-and-purple-cosmic-sky-956999.jpg&fm=jpg) no-repeat;">
+
+<h1 align = "center" >
+<form action="lightings" method="post">
+    {% csrf_token %}
+
+ <h3>Streetlight Status update</h3>   
+
+    <input type="text" name="sensor_update" type="text" placeholder="sensor_update">
+
+<input type="date" name="updatetime" type="date" placeholder="updatetime">
+<input type="text" name="description" type="text" placeholder="description"><br>
+
+
+
+    <input type="submit" >
+
+
+
+
+</form>
+<button onclick="adminpage()"  >Return to main page</button>
+
+
+<script>
+    function adminpage() {
+    location.replace("Admin.html")
+    }
+
+    </script>
+
+</h1>
+</body>
+</html>

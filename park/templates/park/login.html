@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+
+<title>Smart gardening Login</title>
+
+
+
+</head>
+<body style="background: url(https://images.pexels.com/photos/1971086/pexels-photo-1971086.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);">
+<h1 align = "center" >
+<form action="loginmethod" method="post">
+    {% csrf_token %}
+
+ <h3>Login</h3>   
+
+    <input type="text" name="username" type="text" placeholder="username"><br>
+    <input type="password" name="password" type="password" placeholder="password"><br>
+    <input type="submit" >
+
+
+
+
+</form>
+<button onclick="backtohome()"  >Back-to-home</button>
+
+<script>
+    function backtohome() {
+    location.replace("home.html")
+    }
+
+    </script>
+
+</h1>
+</body>
+</html>

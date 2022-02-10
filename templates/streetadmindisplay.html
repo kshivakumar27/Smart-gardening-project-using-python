@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Details</title>
+</head>
+<body bgcolor="lightblue">
+<h1>Strret light status </h1>
+
+
+<hr>
+  {%for item in all3%}
+    ID :{{item.id}} <br>
+    sensor_update : {{item.sensor_update}} <br>
+    updatetime : {{item.updatetime}} <br>
+    description : {{item.description}} <br>
+    
+<hr>
+  {%endfor%} 
+
+
+<button onclick="administrator()"  >Back-to-Adminupdate</button>
+
+
+
+<script>
+    function administrator() {
+    location.replace("administratorupdate.html")
+    }
+
+
+    </script>
+ 
+</body>
+</html>

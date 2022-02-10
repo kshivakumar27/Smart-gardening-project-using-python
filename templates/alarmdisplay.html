@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Details</title>
+</head>
+<body bgcolor="lightblue">
+<h1>Garbage status </h1>
+<button onclick="alarm()"  >Garbage update control</button>
+
+<hr>
+  {%for item in all6%}
+    ID :{{item.id}} <br>
+    garbage_update : {{item.garbage_update}} <br>
+    updatetime : {{item.updatetime}} <br>
+    description : {{item.description}} <br>
+    
+<hr>
+  {%endfor%} 
+
+
+<button onclick="mainpage()"  >Back-to-home</button>
+
+
+
+<script>
+    function mainpage() {
+    location.replace("new.html")
+    }
+
+    function alarm() {
+    location.replace("alarm.html")
+    }
+
+    </script>
+ 
+</body>
+</html>

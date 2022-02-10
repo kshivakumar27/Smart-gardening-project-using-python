@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+</head>
+<body>
+
+<button onclick="mainpage()"  >Back-to-home</button>
+
+
+{%extends 'new.html'%}
+
+{% block content %}
+
+  <div class"Sensorstateupdate">
+<p></p>
+
+	<p> review </p>
+
+{% for rev in all4 %}
+
+<p>{{ all4.Review }}
+
+{% endfor %}
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+{% endblaock %}
+
+
+<script>
+    function mainpage() {
+    location.replace("new.html")
+    }
+ </script>  
+</body>
+</html>
