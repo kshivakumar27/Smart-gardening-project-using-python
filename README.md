@@ -1,1 +1,1 @@
-# Smart-gardening-project-using-python and postgresql.
+# Smart-gardening-project-using-python-and-postgresql.
